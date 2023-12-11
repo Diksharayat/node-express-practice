@@ -1,0 +1,18 @@
+1.To make node.js application first command is :
+  npm init
+2.Next install express.
+  npm i express.
+3.Then make index.js file in your project.
+  require express in the file.
+  then create server
+  app.listen('9000',function(req,res){
+  console.log("server is up and running");
+  }  
+
+4.how to make api:
+  app.get("/",function(req,res){
+  console.log("fetch your post",req,);
+  }
+
+Postman is one of the most popular software testing tools which is used for API testing. 
+With the help of this tool, developers can easily create, test, share, and document APIs.
