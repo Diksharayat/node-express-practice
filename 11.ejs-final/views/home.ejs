@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+  </head>
+  <body>
+    <%- include('partials/nav')%>
+    <h1>Home Page</h1>
+    <%if(user.isAdmin){ %>
+    <p>You are an Admin</p>
+    <%}else{ %>
+    <p>You are not an Admin</p>
+    <button>Apply for admin Role</button>
+    <%}%>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus
+      natus vero sequi tempora nam quod vel iusto aliquid molestiae sunt?
+      Repudiandae rem laborum assumenda facilis in cumque aut molestiae
+      deleniti!
+    </p>
+  </body>
+</html>

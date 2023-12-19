@@ -14,5 +14,47 @@
   console.log("fetch your post",req,);
   }
 
-Postman is one of the most popular software testing tools which is used for API testing. 
+
+NOTES:
+1)Postman is one of the most popular software testing tools which is used for API testing. 
 With the help of this tool, developers can easily create, test, share, and document APIs.
+
+2)Morgan middleware is basically used if we want to know the information like date and time and path information about the request.
+
+3)learned how to add or serve files statically with the help of nodejs and expressjs.
+
+4)To know the path of the working folder type __dirname.
+
+5)I learned how to run mongodb right inside the vs code. 
+
+
+Mongodb steps for initialize
+
+1)register on the mongodb official website.
+2)then make a folder with mkdir and go inside with the cd command.
+  as we are going to install mongodb with the help of npm .So we need to initialize the project with the npm.
+  command is npm init.
+  then go to website of npm and search for mongodb command. 
+  to install latest version you should check and type the latest version.
+3)to connect go to this link :https://www.mongodb.com/docs/drivers/node/current/fundamentals/connection/connect/#std-label-node-connect-to-mongodb
+  to learn about connection and how to make database,collection and document go to mongodb folder in practice.
+
+Mongoose
+
+Check theory from photographs 
+1) We can connect to mongodb using mongoose.
+2) Make new folder mongoose then open in vs code after that install mongoose form npm official website 
+command: npm i mongoose@8.0.3.
+3) Make mongoose.js file then require the mongoose, after that connect like below.
+  const mongoose =require("mongoose");
+  mongoose.connect("here write the connection string of your mongodb database");
+4) Next step is to create schema then go to mongoose official website, go to documentation you will
+ all the steps to create the schema, writing of the datatype name in the schema should start with uppercase letter.
+5) Then create a model(collection),with 
+  const student= mongoose.model("student", studentSchema)
+  model always return a promise or await.
+ To learn how to perform curd operations go to mongoose folder in practice.
+
+6)By default in mongoose it create database name as test, we can change it in the connection string, by adding database name after net/ in the connection string.
+  mongodb+srv://diksha:SyaCG5a141zq4mfi@mongodb-demo.roiawvw.mongodb.net/school?retryWrites=true&w=majority
+  

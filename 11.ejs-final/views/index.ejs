@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Welcome</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime veniam
+      aliquam, reprehenderit repellendus iusto nemo voluptatibus molestias eos,
+      iste aliquid distinctio architecto corporis cum aperiam. Distinctio fugit
+      provident ut error.
+    </p>
+    <h1>Inject Data</h1>
+    <h1>The Result is: <%= 20 + 10 %></h1>
+    <h2>Write js in EJS</h2>
+    <% console.log('From EJS') %>
+
+    <h1>Looping</h1>
+
+    <% ['CSS','JS','Python','Java'].forEach((item)=>{%>
+    <p><%=item%></p>
+    <%})%>
+
+    <!-- Conditions -->
+
+    <% if(30 <20){ %>
+    <p>Yes it is</p>
+    <% } else{ %>
+    <p>No it is not</p>
+    <%}%>
+  </body>
+</html>
+
+<!-- Inject data  -->
+<!-- Write js -->
+<!-- Looping -->
+<!-- make conditions -->
