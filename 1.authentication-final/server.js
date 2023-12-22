@@ -1,5 +1,5 @@
 const express = require("express");
-const path = require("path");
+const bcrypt = require("bcryptjs");
 const app = express();
 const port = 3000;
 const mongoose = require("mongoose");
@@ -50,6 +50,12 @@ app.get("/login", (req, res) => {
   res.render("login");
 });
 
+
+//protected
+app.get("/protected", (req, res) => {
+  res.render("protected");
+});
+
 //login logic
 app.post("/login", async (req, res) => {
   //get the username and password
@@ -58,11 +64,16 @@ app.post("/login", async (req, res) => {
   //find the user inside mongodb
   const userFound = await User.findOne({ username });
   const password = await User.findOne({ password: userPassword });
+ 
   if (!userFound || !password) {
+
     return res.json({
       msg: "Invalid login credentials",
+      
     });
+    
   }
+
   console.log("Login success");
   //API
   // res.json({
@@ -78,17 +89,15 @@ app.get("/register", (req, res) => {
 });
 
 //Register user
-app.post("/register", (req, res) => {
+app.post("/register", async (req, res) => {
+  const {fullName, username, password}=req.body
   //register user
-  User.create({
-    fullName: req.body.fullName,
-    username: req.body.username,
-    password: req.body.password,
+ await User.create({
+    fullName,
+     username,
+     password,
   })
-    .then(user => {
-      res.redirect("/login");
-    })
-    .catch(err => console.log(err));
+   
 });
 
 //profile
